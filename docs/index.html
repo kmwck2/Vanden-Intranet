@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vanden Intranet - Company Portal</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-top">
+      <div class="logo">🏢 VANDEN</div>
+      <div class="header-right">
+        <input type="text" class="search-box" placeholder="Search employees, documents...">
+        <div class="user-profile">
+          <div class="profile-avatar">JD</div>
+          <span>John Doe</span>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#dashboard" class="nav-link active" data-page="dashboard">Dashboard</a></li>
+        <li><a href="#employees" class="nav-link" data-page="employees">Employees</a></li>
+        <li><a href="#news" class="nav-link" data-page="news">News</a></li>
+        <li><a href="#documents" class="nav-link" data-page="documents">Documents</a></li>
+        <li><a href="#teams" class="nav-link" data-page="teams">Teams</a></li>
+        <li><a href="#events" class="nav-link" data-page="events">Events</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- Dashboard Page -->
+    <div id="dashboard" class="page active">
+      <div class="section-header">
+        <h1 class="section-title">Welcome to Vanden Intranet</h1>
+      </div>
+
+      <div class="dashboard-grid">
+        <div class="card">
+          <div class="card-count" id="employee-count">0</div>
+          <div class="card-title">Total Employees</div>
+          <div class="card-desc">Active company staff</div>
+        </div>
+        <div class="card orange">
+          <div class="card-count" id="news-count">0</div>
+          <div class="card-title">Recent News</div>
+          <div class="card-desc">Latest announcements</div>
+        </div>
+        <div class="card green">
+          <div class="card-count" id="document-count">0</div>
+          <div class="card-title">Documents</div>
+          <div class="card-desc">Shared files & resources</div>
+        </div>
+        <div class="card teal">
+          <div class="card-count" id="teams-count">0</div>
+          <div class="card-title">Teams</div>
+          <div class="card-desc">Department teams</div>
+        </div>
+      </div>
+
+      <!-- Recent News -->
+      <div class="section-header">
+        <h2 class="section-title">Recent News</h2>
+        <a href="#news" class="btn btn-outline">View All</a>
+      </div>
+      <div class="item-list" id="news-dashboard"></div>
+
+      <!-- Upcoming Events -->
+      <div class="section-header">
+        <h2 class="section-title">Upcoming Events</h2>
+        <a href="#events" class="btn btn-outline">View All</a>
+      </div>
+      <div class="item-list" id="events-dashboard"></div>
+    </div>
+
+    <!-- Employees Page -->
+    <div id="employees" class="page">
+      <div class="section-header">
+        <h1 class="section-title">Employee Directory</h1>
+        <input type="text" id="employee-search" placeholder="Search employees..." style="padding: 10px 15px; border: 1px solid var(--border-color); border-radius: 5px; width: 250px;">
+      </div>
+      <div class="employees-grid" id="employees-list"></div>
+    </div>
+
+    <!-- News Page -->
+    <div id="news" class="page">
+      <div class="section-header">
+        <h1 class="section-title">Company News & Announcements</h1>
+      </div>
+      <div class="item-list" id="news-list"></div>
+    </div>
+
+    <!-- Documents Page -->
+    <div id="documents" class="page">
+      <div class="section-header">
+        <h1 class="section-title">Document Library</h1>
+        <a href="#" class="btn btn-primary">Upload Document</a>
+      </div>
+      <div class="document-grid" id="documents-list"></div>
+    </div>
+
+    <!-- Teams Page -->
+    <div id="teams" class="page">
+      <div class="section-header">
+        <h1 class="section-title">Teams & Departments</h1>
+      </div>
+      <div class="team-grid" id="teams-list"></div>
+    </div>
+
+    <!-- Events Page -->
+    <div id="events" class="page">
+      <div class="section-header">
+        <h1 class="section-title">Event Calendar</h1>
+      </div>
+      <div id="calendar"></div>
+      <div class="section-header mt-20">
+        <h2 class="section-title">Upcoming Events</h2>
+      </div>
+      <div class="item-list" id="events-list"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Vanden Company Intranet. All rights reserved.</p>
+    <p>Contact IT Support: it-support@vanden.com | Extension: 5000</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
